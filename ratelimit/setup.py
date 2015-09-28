@@ -34,3 +34,13 @@
 # copyright notice and these terms. You must not misrepresent the origins of this
 # program; modified versions of the program must be marked as such and not
 # identified as the original program.
+from setuptools import find_packages, setup
+
+setup(name='codeforlife-reports',
+      version='1.0',
+      packages=find_packages(),
+      include_package_data=True,
+      install_requires=[
+          'django==1.8.4',
+      ],
+      )

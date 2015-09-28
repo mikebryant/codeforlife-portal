@@ -2,7 +2,7 @@
 *.pyc
 local_settings.py
 /static/
-/VIRTUALENV/
+VIRTUALENV
 /env/
 *.iml
 *~
@@ -11,10 +11,11 @@ local_settings.py
 .project
 .pydevproject
 .idea
-dbfile
-testdbfile
+*dbfile
+db.sqlite3
 *.orig
 .sass-cache
 *.DS_Store
 *.jshintrc
 portal/tests/chromedriver
+*.egg-info

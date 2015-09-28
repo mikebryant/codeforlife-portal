@@ -34,6 +34,14 @@
 # copyright notice and these terms. You must not misrepresent the origins of this
 # program; modified versions of the program must be marked as such and not
 # identified as the original program.
-from django.test import TestCase
+from setuptools import find_packages, setup
 
-# Create your tests here.
+setup(name='codeforlife-reports',
+      version='1.0',
+      packages=find_packages(),
+      include_package_data=True,
+      install_requires=[
+          'django==1.8.4',
+          'djangorestframework==3.1.3',
+      ],
+      )
