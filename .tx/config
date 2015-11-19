@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[code-for-life.portal]
+file_filter = portal/locale/<lang>/LC_MESSAGES/django.po
+source_file = portal/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
