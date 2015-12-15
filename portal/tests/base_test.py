@@ -44,7 +44,6 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 #### Uncomment to use FireFox
 # master_browser = webdriver.Firefox()
-from portal.tests.pageObjects.portal.game_page import GamePage
 from portal.tests.pageObjects.portal.home_page import HomePage
 from deploy import captcha
 
@@ -105,24 +104,6 @@ class BaseTest(StaticLiveServerTestCase):
         path = reverse('home')
         self._go_to_path(path)
         return HomePage(self.browser)
-
-    def go_to_level(self, level_name):
-        path = reverse('play_default_level', kwargs={'levelName': str(level_name)})
-        self._go_to_path(path)
-
-        return GamePage(self.browser)
-
-    def go_to_custom_level(self, level):
-        path = reverse('play_custom_level', kwargs={'levelId': str(level.id)})
-        self._go_to_path(path)
-
-        return GamePage(self.browser)
-
-    def go_to_episode(self, episodeId):
-        path = reverse('start_episode', kwargs={'episodeId': str(episodeId)})
-        self._go_to_path(path)
-
-        return GamePage(self.browser)
 
     def _go_to_path(self, path):
         self.browser.get(self.live_server_url + path)
